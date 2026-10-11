@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Yordamchi">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1C0B19">
 <meta name="googlebot" content="noindex, nofollow">
 <title>Vrachlarga eslatma: matn va rasmli xabarlar (Kusum Nevrologiya)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -158,7 +164,7 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
   <div class="cloud"><span id="cloudStat">…</span><button type="button" id="cloudSync">Sinxronlash</button></div>
   <p style="margin-top:12px">Oylik reja, rasmiy posterlar, preparat ma'lumotlari, SPV, tayyor matn va rasmli xabar, kelishuvlar, dorixonalar, hisobot va nojo'ya ta'sir shakli — bir joyda.</p>
 </header>
-<nav class="nav" aria-label="Bo'limlar"><a href="#docs">Vrachlar</a><a href="#disc">DISC</a><a href="#plan">Oylik reja</a><a href="#post">Posterlar</a><a href="#combo">Ko‘p dorili</a><a href="#after">Vizitdan keyin</a><a href="#hist">Tarix</a><a href="#s2">Preparat</a><a href="#spec">Mutaxassis</a><a href="#s4">Matn</a><a href="#s5">Rasm</a><a href="#obj">E'tirozlar</a><a href="#agr">Kelishuvlar</a><a href="#pharmS">Dorixonalar</a><a href="#rep">Hisobot</a><a href="#ae">Nojo'ya ta'sir</a><a href="#bk">Zaxira</a><a href="#s1">Qoidalar</a></nav>
+<nav class="nav" aria-label="Bo'limlar"><a href="#docs">Vrachlar</a><a href="#disc">DISC</a><a href="#plan">Oylik reja</a><a href="#post">Posterlar</a><a href="#combo">Ko‘p dorili</a><a href="#after">Vizitdan keyin</a><a href="#hist">Tarix</a><a href="#s2">Preparat</a><a href="#spec">Mutaxassis</a><a href="#s4">Matn</a><a href="#s5">Rasm</a><a href="#obj">E'tirozlar</a><a href="#agr">Kelishuvlar</a><a href="#pharmS">Dorixonalar</a><a href="#rep">Hisobot</a><a href="#ae">Nojo'ya ta'sir</a><a href="#botset">Bot</a><a href="#bk">Zaxira</a><a href="#news">Yangiliklar</a><a href="#s1">Qoidalar</a></nav>
 <a class="banner" id="dueBanner" href="#agr" hidden></a>
 
 <h2 id="s1"><span class="n">1</span>Oltin qoidalar</h2>
@@ -244,7 +250,7 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
   <div class="seg" id="scriptSeg"><button type="button" data-s="cyr" aria-pressed="true">Кирилл (asl material)</button><button type="button" data-s="lat" aria-pressed="false">Lotin</button></div>
   <label class="check"><input type="checkbox" id="postGreet"> Vrach ismi bilan boshlansin (3-bo'limdagi ism)</label>
   <div class="preview"><canvas id="pcv" width="1080" height="1350" aria-label="Poster"></canvas></div>
-  <div class="btns" style="justify-content:center"><button type="button" class="btn" id="pdl">Rasmni saqlash</button><button type="button" class="btn tg" id="pshare">Ulashish</button></div>
+  <div class="btns" style="justify-content:center"><button type="button" class="btn" style="background:#229ED9" id="pbot">📤 Botga</button><button type="button" class="btn" id="pdl">Rasmni saqlash</button><button type="button" class="btn tg" id="pshare">Ulashish</button></div>
   <div id="pimgOut" class="preview"></div>
   <label class="check"><input type="checkbox" id="postUnsent"> Faqat shu vrachga hali yuborilmaganlar</label>
   <label class="check"><input type="checkbox" id="postQr"> Telegram QR kodini qo'shish (vrach skaner qilib sizga yozadi)</label>
@@ -262,7 +268,7 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
   <input id="comboTitle" placeholder="Masalan: Деменция">
   <div id="comboFacts"></div>
   <div class="preview"><canvas id="ccv" width="1080" height="1350" aria-label="Bir nechta dori posteri"></canvas></div>
-  <div class="btns" style="justify-content:center"><button type="button" class="btn" id="cdl">Rasmni saqlash</button><button type="button" class="btn tg" id="cshare">Ulashish</button></div>
+  <div class="btns" style="justify-content:center"><button type="button" class="btn" style="background:#229ED9" id="cbot">📤 Botga</button><button type="button" class="btn" id="cdl">Rasmni saqlash</button><button type="button" class="btn tg" id="cshare">Ulashish</button></div>
   <div id="cimgOut" class="preview"></div>
   <p class="hint">Yozuv turi (kirill/lotin), vrach ismi va QR kod sozlamalari yuqoridagi posterlar bilan umumiy.</p>
 </div>
@@ -279,7 +285,7 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
     <div class="btns"><button type="button" class="btn" id="af_copy">Nusxalash</button><a class="btn tg" id="af_tg" target="_blank" rel="noopener">Telegram</a></div>
     <h3>2. Rasm (shu vizit preparatlari)</h3>
     <div class="preview"><img id="af_img" alt="Ko'p dorili rasm"></div>
-    <div class="btns" style="justify-content:center"><button type="button" class="btn" id="af_dl">Rasmni saqlash</button><button type="button" class="btn tg" id="af_share">Ulashish</button></div>
+    <div class="btns" style="justify-content:center"><button type="button" class="btn" style="background:#229ED9" id="af_bot">📤 Rasm va xabarni botga</button><button type="button" class="btn" id="af_dl">Rasmni saqlash</button><button type="button" class="btn tg" id="af_share">Ulashish</button></div>
     <p class="hint">Rasmdagi faktlarni "Bir nechta dori — bitta rasmda" bo'limida o'zgartirishingiz mumkin.</p>
     <h3>3. Kelishuv eslatmasi</h3>
     <div class="grid"><div class="full"><label for="af_what">Nima kelishildi</label><input id="af_what"></div><div><label for="af_due">Qachon tekshirish</label><input id="af_due" type="date"></div>
@@ -378,7 +384,7 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
   <textarea id="note" placeholder="Masalan: Savollaringiz bo'lsa, yozing."></textarea>
   <div class="preview"><canvas id="cv" width="1080" height="1350" aria-label="Rasmli xabar ko'rinishi"></canvas></div>
   <div class="btns" style="justify-content:center">
-    <button type="button" class="btn" id="dl">Rasmni saqlash</button>
+    <button type="button" class="btn" style="background:#229ED9" id="kbot">📤 Botga</button><button type="button" class="btn" id="dl">Rasmni saqlash</button>
     <button type="button" class="btn tg" id="share">Ulashish</button>
   </div>
   <p class="hint" style="text-align:center;margin-top:8px">iPhone'da: "Rasmni saqlash" dan keyin pastda chiqqan rasmni bosib turing va "Fotosuratlarga saqlash" ni tanlang.</p>
@@ -462,7 +468,27 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
   <p class="kv" style="margin-top:12px">Farmakologik nazorat bo'limi: <a href="tel:+998781509797">+998 78 150 97 97</a>, <a href="tel:+998933888782">+998 93 388 87 82</a>, <a href="mailto:pv@kusum.uz">pv@kusum.uz</a>. Manba: <a href="https://kusum.uz/oz/pharmacovigilance" target="_blank" rel="noopener">kusum.uz</a>.</p>
 </div>
 
-<h2 id="bk"><span class="n">18</span>Zaxira nusxa</h2>
+<h2 id="botset"><span class="n">18</span>Telegram bot (yuborish)</h2>
+<p>Poster, rasm va xabarlarni bir bosishda o'zingizning botingizga vrach ism-familiyasi bilan yuboradi. Keyin botdan vrachga forward qilasiz. Token faqat shu qurilmada saqlanadi — bulutga ham, zaxira fayliga ham yozilmaydi.</p>
+<div class="panel">
+  <ol style="margin:0 0 10px;padding-left:20px;font-size:15px">
+    <li>@BotFather → <b>/newbot</b> → yangi bot (moshina trackerdagidan alohida). Tokenni nusxalang.</li>
+    <li>Tokenni pastga qo'ying, keyin botingizni ochib <b>/start</b> yozing.</li>
+    <li><b>"Chat ID'ni aniqlash"</b> ni bosing, keyin <b>"Saqlash va tekshirish"</b>.</li>
+  </ol>
+  <div class="grid">
+    <div class="full"><label for="bt_token">Bot tokeni</label><input id="bt_token" type="password" autocomplete="off" placeholder="123456789:AA..."></div>
+    <div><label for="bt_chat">Chat ID</label><input id="bt_chat" inputmode="numeric" placeholder="123456789"></div>
+    <div style="display:flex;align-items:flex-end"><button type="button" class="btn alt" id="bt_find" style="width:100%;justify-content:center;margin-top:12px">Chat ID'ni aniqlash</button></div>
+  </div>
+  <div class="btns" style="margin-top:12px"><button type="button" class="btn" id="bt_save">Saqlash va tekshirish</button><button type="button" class="btn alt" id="bt_del">O'chirish</button></div>
+  <label class="check"><input type="checkbox" id="bt_agr" checked> Yangi kelishuvni avtomatik botga yuborish</label>
+  <label class="check"><input type="checkbox" id="bt_day" checked> Kun boshida (ilova birinchi ochilganda) kelishuvlar ro'yxatini yuborish</label>
+  <p class="hint" id="bt_info"></p>
+  <p class="hint">Eslatma: bot faqat Telegram Mini App va GitHub versiyasida ishlaydi; Claude'dagi sahifa tashqi saytlarga ulanmaydi. Bot vrachga o'zi yozmaydi — faqat sizga.</p>
+</div>
+
+<h2 id="bk"><span class="n">19</span>Zaxira nusxa</h2>
 <p>Barcha ma'lumotlar (tahrirlar, SPV, kelishuvlar, vrachlar, sozlamalar) faqat shu telefonda saqlanadi. Brauzer tozalansa yoki telefon almashtirilsa, yo'qoladi. Haftada bir marta zaxira oling va Telegram'dagi "Saqlanganlar" (Saved Messages) ga tashlab qo'ying.</p>
 <div class="panel">
   <label class="check"><input type="checkbox" id="bkImg" checked> Qadoq rasmlarini ham qo'shish (fayl kattaroq bo'ladi)</label>
@@ -474,7 +500,7 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
   <p class="hint" id="bkInfo" style="margin-top:10px"></p>
 </div>
 
-<h2 id="s6"><span class="n">19</span>Qachon nima yuborish</h2>
+<h2 id="s6"><span class="n">20</span>Qachon nima yuborish</h2>
 <figure class="fig">
 <svg viewBox="0 0 640 300" role="img" aria-label="Vizitdan keyingi xabarlar ketma-ketligi">
   <g font-family="Poppins,sans-serif">
@@ -487,7 +513,10 @@ footer{margin-top:56px;font-size:13.5px;color:var(--muted);border-top:1px solid 
 </figure>
 <div class="note good">Telegram'da <strong>"Vrachlar"</strong> papkasini oching, oltin vrachlarni tepaga qadab qo'ying. Bu fayl telefoningizda tursin: nomini yozasiz, rasm tayyor, yuborasiz.</div>
 
-<footer>Versiya: 2026-10-11. Preparat ma'lumotlari kusum.uz saytining o'zbekcha sahifalaridan (Nevrologiya bo'limi, 22 ta preparat) olingan. Sayt ma'lumotlari yangilanishi mumkin; shubha bo'lsa, rasmiy yo'riqnomaga qarang. Kusum Healthcare Uzbekistan (Baraka Dori Farm), tibbiy vakil Islombek Cho'ponov.</footer>
+<h2 id="news"><span class="n">21</span>Yangiliklar (versiyalar)</h2>
+<div class="panel" id="newsList"></div>
+
+<footer>Versiya: 1.7 (2026-10-11). Preparat ma'lumotlari kusum.uz saytining o'zbekcha sahifalaridan (Nevrologiya bo'limi, 22 ta preparat) olingan. Sayt ma'lumotlari yangilanishi mumkin; shubha bo'lsa, rasmiy yo'riqnomaga qarang. Kusum Healthcare Uzbekistan (Baraka Dori Farm), tibbiy vakil Islombek Cho'ponov.</footer>
 </main>
 <div class="toast" id="toast" role="status"></div>
 
@@ -620,12 +649,12 @@ ru:[
 ["Ответ на вопрос","в течение часа",d=>`Уважаемый(ая) ${d.doc}, спасибо за вопрос. Уточню официальную информацию по ${d.name} и отправлю вам сегодня/завтра.\n\n${SIGN(d)}`]]};
 function renderMsgs(){const d=data();const box=$("msgs");box.innerHTML="";
  TEXTS[st.lang].forEach(([t,w,f])=>{const txt=f(d);const el=document.createElement("div");el.className="msg";
-  el.innerHTML=`<div class="t"><span></span><small></small></div><pre></pre><div class="btns"><button class="btn" type="button">Nusxalash</button><a class="btn tg" target="_blank" rel="noopener">Telegram</a><a class="btn alt">SMS</a></div>`;
+  el.innerHTML=`<div class="t"><span></span><small></small></div><pre></pre><div class="btns"><button class="btn" type="button">Nusxalash</button><a class="btn tg" target="_blank" rel="noopener">Telegram</a><a class="btn alt">SMS</a><button class="btn bb" type="button" style="background:#229ED9">📤 Botga</button></div>`;
   el.querySelector(".t span").textContent=t;el.querySelector("small").textContent=w;el.querySelector("pre").textContent=txt;
   el.querySelector("button").onclick=()=>{copy(txt);rememberDoc();logSent({what:"text",ref:t+":"+d.name,label:t+" — "+d.name})};
   el.querySelector(".tg").href="https://t.me/share/url?url="+encodeURIComponent(d.pdf||d.url||"https://kusum.uz/oz")+"&text="+encodeURIComponent(txt);
   el.querySelector(".tg").onclick=()=>{rememberDoc();logSent({what:"text",ref:t+":"+d.name,label:t+" — "+d.name})};
-  el.querySelector(".alt").href="sms:?&body="+encodeURIComponent(txt);box.appendChild(el)})}
+  el.querySelector(".alt").href="sms:?&body="+encodeURIComponent(txt);el.querySelector(".bb").onclick=()=>botText(txt,{what:"text",ref:t+":"+d.name,label:t+" — "+d.name});box.appendChild(el)})}
 function copy(t){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast("Nusxalandi")).catch(()=>{const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy");toast("Nusxalandi")}catch(e){toast("Matnni bosib turib nusxalang")}a.remove()})}
 function toast(m){const t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("on"),1800)}
 function rememberDoc(){const v=$("doc").value.trim();if(!v)return;docs=[v].concat(docs.filter(x=>x!==v)).slice(0,40);S.set("kusum-docs",docs);renderDocs()}
@@ -753,7 +782,7 @@ function addDays(n){const t=new Date();t.setDate(t.getDate()+n);return t.getFull
 function fmt(d){if(!d)return "";const [y,m,dd]=d.split("-");return dd+"."+m+"."+y}
 $("a_due").value=addDays(7);
 $("a_add").onclick=()=>{const doc=$("a_doc").value.trim(),what=$("a_what").value.trim();if(!doc||!what){toast("Vrach va kelishuvni yozing");return}
- agr.unshift({id:Date.now(),doc,prod:$("a_prod").value.trim(),what,due:$("a_due").value||addDays(7),status:"open",res:"",created:today()});S.set("kusum-agr",agr);buildReport();
+ agr.unshift({id:Date.now(),doc,prod:$("a_prod").value.trim(),what,due:$("a_due").value||addDays(7),status:"open",res:"",created:today()});S.set("kusum-agr",agr);buildReport();botAgr(agr[0]);
  $("doc").value=doc;rememberDoc();$("a_what").value="";$("a_due").value=addDays(7);renderAgr();toast("Kelishuv qo'shildi")};
 function renderAgr(){const t=today();const box=$("agrList");box.innerHTML="";
  const order=a=>a.status!=="open"?3:(a.due<t?0:(a.due===t?1:2));
@@ -1187,7 +1216,7 @@ function afTextDisc(name,names,ru,k){
 
 
 /* ===================== CALENDAR, PIN, BACKUP REMINDER, PRIMARY NOTE ===================== */
-const APP_VER="2026-10-11";
+const APP_VER="1.7";const APP_DATE="2026-10-11";const CHANGES=[["1.7", "2026-10-11", ["Telegram bot: poster, ko‘p dorili rasm, rasmli va matnli xabarlarni vrach ism-familiyasi bilan «📤 Botga» yuborish", "Vizitdan keyingi to‘plamni (rasm + rahmat xabari) bir bosishda botga yuborish", "Yangi kelishuv avtomatik botga; kun boshida kelishuvlar ro‘yxati", "«Yangiliklar» bo‘limi va yangi versiya haqida xabar"]], ["1.6", "", ["PIN-kod bilan himoya", "Kelishuvni telefon kalendariga qo‘shish (.ics, Google Kalendar)", "Zaxira eslatmasi (7 kun)", "Oy materiallari kiritilmagan bo‘lsa ogohlantirish", "Qidiruv tizimlaridan yashirish, ilova belgisi, versiya raqami"]], ["1.5", "", ["DISC: vrach kartasida tur, 8 savolli yordamchi, muloqot maslahati, mos posterlar, uslubga mos rahmat xabari", "Telegram Mini App: Telegram bulutida sinxron"]], ["1.4", "", ["Oktyabr rejasi (setka + tematika), sentyabr arxivi", "Yangi 9 poster, Konfundus va 8 preparat qadoq rasmlari", "SPV: Kvanil, Lanistor, Logufen, Zoresan, Oksapin, Servoneks, Mezakar, Flutisal, Rosemid, Konfundus, Rekol"]], ["1.3", "", ["Vrachlar kartotekasi, yuborilganlar tarixi, vizitdan keyingi to‘plam", "Bulutli sinxron (claude.ai)", "Bir nechta dori — bitta rasmda, Telegram QR kodi"]], ["1.2", "", ["Sentyabr oylik rejasi", "Rasmiy materiallar asosida posterlar"]], ["1.1", "", ["SPV, qaysi mutaxassisga qaysi preparat", "Kelishuvlar, nojo‘ya ta’sir shakli, zaxira nusxa", "E’tirozlarga javoblar, dorixonalar jurnali, haftalik hisobot"]], ["1.0", "", ["Vrachlarga eslatma qoidalari, matnli va rasmli xabarlar", "kusum.uz asosida preparat ma’lumotlari"]]];
 function icsEsc(t){return String(t||"").replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\\;")}
 function icsDate(d){return d.replace(/-/g,"")}
 function icsFor(list){const now=new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+Z$/,"Z");let o="BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Kusum yordamchi//UZ\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\n";
@@ -1217,6 +1246,43 @@ function backupNag(){const last=S.get("kusum-lastbackup",0);const has=(doctors&&
 function primNote(){const inClaude=window.claude&&typeof window.claude.use==="function";if(!inClaude||tgDetect())return;if(S.get("kusum-primack",false))return;$("primNote").hidden=false}
 $("primOk").onclick=()=>{try{localStorage.setItem("kusum-primack","true")}catch(e){}$("primNote").hidden=true};
 
+
+/* ===================== TELEGRAM BOT SEND ===================== */
+const BOT={get token(){try{return localStorage.getItem("kbot-token")||""}catch(e){return""}},get chat(){try{return localStorage.getItem("kbot-chat")||""}catch(e){return""}}};
+function botReady(){return !!(BOT.token&&BOT.chat)}
+function botInfo(){$("bt_info").textContent=botReady()?"✅ Bot ulangan. Chat ID: "+BOT.chat:"Bot hali ulanmagan.";$("bt_token").value=BOT.token?"••••••••••":"";$("bt_chat").value=BOT.chat}
+async function botApi(method,body,isForm){const r=await fetch("https://api.telegram.org/bot"+BOT.token+"/"+method,isForm?{method:"POST",body}:{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});const j=await r.json();if(!j.ok)throw new Error(j.description||"xato");return j.result}
+function botErr(e){const m=String(e&&e.message||e);if(/Failed to fetch|NetworkError|Load failed|blocked/i.test(m))toast("Bot faqat Telegram yoki GitHub versiyasida ishlaydi");else toast("Bot xatosi: "+m)}
+function stamp2(){const d=new Date();return String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0")+"."+d.getFullYear()+" "+String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")}
+function docLine(){const n=$("doc").value.trim();if(!n)return "👤 Vrach: ko‘rsatilmagan";const dc=findDoctor(n);return "👤 Vrach: "+n+(dc?" ("+(SPN[dc.spec]||"")+(dc.disc?", "+dc.disc:"")+")":"")}
+function needBot(){if(!botReady()){toast("Avval «Telegram bot» bo‘limida botni ulang");document.getElementById("botset").scrollIntoView({behavior:"smooth"});return false}return true}
+async function botPhoto(canvas,label,log){if(!needBot())return;rememberDoc();const cap=(docLine()+"\n🖼 "+label+"\n🕒 "+stamp2()).slice(0,1000);
+ canvas.toBlob(async b=>{try{const f=new FormData();f.append("chat_id",BOT.chat);f.append("caption",cap);f.append("photo",new File([b],"kusum.png",{type:"image/png"}));
+  try{await botApi("sendPhoto",f,true)}catch(e){if(/PHOTO|dimension|too big/i.test(String(e.message))){const g=new FormData();g.append("chat_id",BOT.chat);g.append("caption",cap);g.append("document",new File([b],"kusum.png",{type:"image/png"}));await botApi("sendDocument",g,true)}else throw e}
+  toast("Botga yuborildi ✅");if(log)logSent(log)}catch(e){botErr(e)}},"image/png")}
+async function botText(txt,log){if(!needBot())return;rememberDoc();try{await botApi("sendMessage",{chat_id:BOT.chat,text:(docLine()+"\n💬 Xabar ("+stamp2()+"):\n\n"+txt).slice(0,4000),disable_web_page_preview:true});toast("Botga yuborildi ✅");if(log)logSent(log)}catch(e){botErr(e)}}
+async function botAgr(a){if(!a||!botReady()||!$("bt_agr").checked)return;try{await botApi("sendMessage",{chat_id:BOT.chat,text:"🤝 Yangi kelishuv\n👤 "+a.doc+(a.prod?"\n💊 "+a.prod:"")+"\n📝 "+a.what+"\n📅 Tekshirish: "+fmt(a.due)})}catch(e){}}
+async function botDaily(){if(!botReady()||!$("bt_day").checked)return;const t=today();if(S.get("kusum-botday","")===t)return;
+ const open=agr.filter(a=>a.status==="open");const over=open.filter(a=>a.due<t),tod=open.filter(a=>a.due===t),soon=open.filter(a=>a.due>t&&a.due<=addDays(3));
+ let m="☀️ Kun boshi — "+fmt(t)+"\n";if(!over.length&&!tod.length&&!soon.length)m+="\nBugun va yaqin 3 kunda tekshiriladigan kelishuv yo‘q ✅";
+ const L=(h,arr)=>{if(arr.length)m+="\n"+h+"\n"+arr.map(a=>"• "+a.doc+(a.prod?" — "+a.prod:"")+": "+a.what+" ("+fmt(a.due)+")").join("\n")+"\n"};
+ L("🔴 Muddati o‘tgan:",over);L("🟡 Bugun:",tod);L("🟢 Yaqin 3 kun:",soon);
+ try{await botApi("sendMessage",{chat_id:BOT.chat,text:m.slice(0,4000)});S.set("kusum-botday",t)}catch(e){}}
+$("bt_find").onclick=async()=>{const tk=$("bt_token").value.trim();if(tk&&tk.indexOf("•")<0){try{localStorage.setItem("kbot-token",tk)}catch(e){}}if(!BOT.token){toast("Avval tokenni kiriting");return}
+ try{const ups=await botApi("getUpdates",{limit:20});const m=ups.reverse().map(u=>u.message||u.edited_message).find(x=>x&&x.chat);if(!m){toast("Botga /start yozing va qayta bosing");return}$("bt_chat").value=m.chat.id;toast("Chat ID topildi")}catch(e){botErr(e)}};
+$("bt_save").onclick=async()=>{const tk=$("bt_token").value.trim(),ch=$("bt_chat").value.trim();try{if(tk&&tk.indexOf("•")<0)localStorage.setItem("kbot-token",tk);if(ch)localStorage.setItem("kbot-chat",ch)}catch(e){}
+ if(!botReady()){toast("Token va chat ID kerak");return}try{const me=await botApi("getMe",{});await botApi("sendMessage",{chat_id:BOT.chat,text:"✅ Ulandi: Tibbiy vakil yordamchisi (v"+APP_VER+")"});toast("Bot ulandi: @"+me.username);botInfo()}catch(e){botErr(e)}};
+$("bt_del").onclick=()=>{if(!confirm("Bot sozlamalari o‘chirilsinmi?"))return;try{localStorage.removeItem("kbot-token");localStorage.removeItem("kbot-chat")}catch(e){}botInfo();toast("O‘chirildi")};
+["bt_agr","bt_day"].forEach(id=>{try{const v=localStorage.getItem("kbot-"+id);if(v!==null)$(id).checked=v==="1"}catch(e){}$(id).onchange=()=>{try{localStorage.setItem("kbot-"+id,$(id).checked?"1":"0")}catch(e){}}});
+$("pbot").onclick=()=>{pDraw();const P=PDATA.posters.find(x=>x.id===pst.sel);if(!P){toast("Posterni tanlang");return}botPhoto(pcv,TX(P.name)+": "+TX(P.head),pLog())};
+$("cbot").onclick=()=>{cDraw();botPhoto(ccv,TX(combo.title||"")+": "+combo.keys.map(k=>DNAME[k]).join(", "),cLog())};
+$("kbot").onclick=()=>{drawNow();botPhoto(cv,TPL[st.tpl].uz[0]+": "+data().name,kLog())};
+$("af_bot").onclick=async()=>{cDraw();if(!needBot())return;await botPhoto(ccv,"Vizitdan keyin: "+combo.keys.map(k=>DNAME[k]).join(", "),cLog());setTimeout(()=>botText($("af_text").textContent,{what:"text",ref:"rahmat:"+today(),label:"Vizitdan keyin: rahmat xabari"}),1500)};
+/* news */
+function renderNews(){const b=$("newsList");b.innerHTML=CHANGES.map(([v,d,items],i)=>`<div style="${i?"border-top:1px dashed var(--line);padding-top:10px;margin-top:10px":""}"><b>v${v}</b>${d?" <span class='hint'>("+d+")</span>":""}${i===0?" <span class='sentb'>joriy</span>":""}<ul style="margin:6px 0 0">${items.map(x=>"<li>"+x+"</li>").join("")}</ul></div>`).join("")}
+function newsPopup(){let last=null;try{last=localStorage.getItem("kusum-seenver")}catch(e){}if(last===APP_VER)return;try{localStorage.setItem("kusum-seenver",APP_VER)}catch(e){}if(!last)return;
+ const a=document.createElement("a");a.className="banner";a.href="#news";a.style.background="var(--green)";a.textContent="🆕 Yangi versiya v"+APP_VER+": "+CHANGES[0][2][0]+" — batafsil";const db=document.getElementById("dueBanner");db.parentNode.insertBefore(a,db.nextSibling)}
+
 /* ---- wiring ---- */
 const OTHER=["doc","pharm","addr","evt","evtWhen","evtWhere","holiday","note"];
 function save(){OTHER.forEach(f=>st[f]=$(f).value);st.pname=$("pname").value;S.set("kusum-rem2",st)}
@@ -1228,7 +1294,7 @@ function onProd(){save();fillFields();loadPack();renderSpv();renderObj();availLi
 $("pname").addEventListener("input",onProd);$("pname").addEventListener("change",onProd);
 OTHER.forEach(f=>$(f).addEventListener("input",()=>{save();refresh()}));
 OTHER.forEach(f=>{if(st[f]!=null)$(f).value=st[f]});$("pname").value=st.pname||"";
-$("spvOn").checked=st.spvOn!==false;segs();renderTpls();renderDocs();fillFields();loadPack();renderSpv();renderSpecs();renderAgr();renderPostSpec();renderPostList();pDraw();renderPlan();renderCombo();cDraw();renderSent();renderDocList();renderDocs();afInfo();setCloudStat("local");pinInfo();showLock();backupNag();primNote();cloudInit(false);renderObj();renderPharm();availLine();buildReport();$("ae_prod").value=$("ae_prod").value||$("pname").value;aeBuild();refresh();
+$("spvOn").checked=st.spvOn!==false;segs();renderTpls();renderDocs();fillFields();loadPack();renderSpv();renderSpecs();renderAgr();renderPostSpec();renderPostList();pDraw();renderPlan();renderCombo();cDraw();renderSent();renderDocList();renderDocs();afInfo();setCloudStat("local");pinInfo();showLock();backupNag();primNote();botInfo();renderNews();newsPopup();cloudInit(false).then(()=>setTimeout(botDaily,1500));renderObj();renderPharm();availLine();buildReport();$("ae_prod").value=$("ae_prod").value||$("pname").value;aeBuild();refresh();
 if(document.fonts&&document.fonts.load){Promise.all([700,600,500,400].map(w=>document.fonts.load(F(w,40)))).then(draw).catch(()=>{});Promise.all([800,700,600,500].map(w=>document.fonts.load(MF(w,40)))).then(()=>{pDraw();cDraw()}).catch(()=>{})}
 </script>
 </body>
